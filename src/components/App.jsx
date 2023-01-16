@@ -15,26 +15,43 @@
 //   );
 // };
 
-import PaintingList from './paintingList';
-import Section from './section';
-import paintings from '../paintings.json';
+// =======================================================
+// import PaintingList from './paintingList';
+// import Section from './section';
+// import paintings from '../paintings.json';
+
+// export default function App() {
+//   // Рендарить по УСЛОВИЮ можно 2 способами:
+//   // Реакт никогда не рендарит: False, Undefined, null
+//   const isOnline = true;
+
+//   return (
+//     <div>
+//       {/* первый способ */}
+//       {isOnline && 'Онлайн'}
+//       {/* второй способ */}
+//       {isOnline ? 'онлайн' : 'офлайн'}
+
+//       <Section title="TOP week">
+//         <PaintingList items={paintings} />
+//       </Section>
+//       <Section title='the best' />
+//     </div>
+//   );
+// }
+// =======================================================
+
+import user from '../user.json'
+import Profile from '../Profile/Profile'
 
 export default function App() {
-  // Рендарить по условию можно 2 способами:
-  // Реакт никогда не рендарит: False, Undefined, null
-  const isOnline = true;
-
   return (
-    <div>
-      {/* первый способ */}
-      {isOnline && 'Онлайн'}
-      {/* второй способ */}
-      {isOnline ? 'онлайн' : 'офлайн'}
-
-      <Section title="TOP week">
-        <PaintingList items={paintings} />
-      </Section>
-      <Section title='the best' />
-    </div>
+    <Profile
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats}
+    />
   );
 }

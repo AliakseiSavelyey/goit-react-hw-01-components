@@ -10,8 +10,7 @@ import App  from './components/App';
 // );
 
 // ============================================================
-
-
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <App />
 );
+// ============================================================
