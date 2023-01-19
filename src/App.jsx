@@ -41,14 +41,14 @@
 // }
 // =======================================================
 
-import user from 'data/user.json';
-import statistics from 'data/statistics.json';
-import friends from 'data/friends.json'
-import transactions from 'data/transactions.json';
 import Container from 'components/Container/Container';
+import user from 'data/user.json';
 import Profile from 'components/Profile/Profile';
+import statistics from 'data/statistics.json';
 import Statistics from 'components/Statistics/Statistics';
+import friends from 'data/friends.json'
 import FriendList from 'components/FriendList/FriendList'
+import transactions from 'data/transactions.json';
 import TransactionHistory from 'components/Transaction/TransactionHistory';
 
 export default function App() {
@@ -63,7 +63,7 @@ export default function App() {
       />
       <Statistics title="Upload stats" stats={statistics} />
       <FriendList friends={friends} />
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory items={transactions} />
     </Container>
   );
 }
