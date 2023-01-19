@@ -46,10 +46,11 @@ import user from 'data/user.json';
 import Profile from 'components/Profile/Profile';
 import statistics from 'data/statistics.json';
 import Statistics from 'components/Statistics/Statistics';
-import friends from 'data/friends.json'
-import FriendList from 'components/FriendList/FriendList'
+import friends from 'data/friends.json';
+import FriendList from 'components/FriendList/FriendList';
 import transactions from 'data/transactions.json';
 import TransactionHistory from 'components/Transaction/TransactionHistory';
+import Alert from 'components/Alert/Alert';
 
 export default function App() {
   return (
@@ -61,6 +62,10 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Alert text="success" type="success" />
+      <Alert text="warning" type="warning" />
+      <Alert text="error" type="error" />
+
       <Statistics title="Upload stats" stats={statistics} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
