@@ -1,8 +1,7 @@
 // prop-types Библиотека подсказывает чем элемент должен быть(например: строка или число), работает только в Разработке (в продакшене не работает)
 // import PropTypes from 'prop-types'; 
 
-// export default function Painting(props) {
-//   const { url, alt, href, author, price, quantity } = props;
+// export default function Painting({ url, alt, href, author, price, quantity }) {
 
 //   return (
 //     <div>
